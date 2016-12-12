@@ -9,26 +9,26 @@ namespace FSync
 {
     class Program
     {
-        static bool r           = false;
-        static bool f           = false;
-        static string z         = "";
-        static string e         = @"^.+\.*$";
-        static string i         = "";
-        static string SRCDIR    = "";
-        static string DESTDIR   = "";
+        static bool allowCreateSubdirectories   = false;
+        static bool allowOverwriteExistingFiles = false;
+        static string ZIPfileSuffixName         = "";
+        static string listOfAllowedExtensions   = @"^.+\.*$";
+        static string indexFileName             = "";
+        static string sourceDirectory           = "";
+        static string destinationDirectory      = "";
 
         static void Main(string[] args)
         {
 
             setParams(args);
 
-            FSync_lib.FSync_lib.setR(r);
-            FSync_lib.FSync_lib.setF(f);
-            FSync_lib.FSync_lib.setZ(z);
-            FSync_lib.FSync_lib.setE(e);
-            FSync_lib.FSync_lib.setR(i);
-            FSync_lib.FSync_lib.setSRCDIR(SRCDIR);
-            FSync_lib.FSync_lib.setDESTDIR(DESTDIR);
+            FSync_lib.FSync_lib.setAllowCreateSubdirectories(allowCreateSubdirectories);
+            FSync_lib.FSync_lib.setAllowOverwriteExistingFiles(allowOverwriteExistingFiles);
+            FSync_lib.FSync_lib.setZIPfileSuffixName(ZIPfileSuffixName);
+            FSync_lib.FSync_lib.setListOfAllowedExtensions(listOfAllowedExtensions);
+            FSync_lib.FSync_lib.setIndexFileName(indexFileName);
+            FSync_lib.FSync_lib.setSourceDirectory(sourceDirectory);
+            FSync_lib.FSync_lib.setDestinationDirectory(destinationDirectory);
 
             FSync_lib.FSync_lib.run();
 
@@ -37,41 +37,33 @@ namespace FSync
 
         private static void setParams(string[] args)
         {
-            // Testovací hodnoty
-            /*SRCDIR  = @"C:\directory\";
-            DESTDIR = @"C:\directoryDEST\";
-            i       = "index.txt";
-            r       = true;
-            f       = true;
-            z       = "";*/
-
             for (int j = 0; j < args.Length; j++)
             {
                 switch (args[j])
                 {
                     case "-r":
-                        r = true;
+                        allowCreateSubdirectories = true;
                         break;
                     case "-f":
-                        f = true;
+                        allowOverwriteExistingFiles = true;
                         break;
                     case "-z":
                         DateTime date = DateTime.Now;
                         string dateString = date.ToString("yyyyMMddHHmmss");
 
-                        z = dateString + args[j + 1] + ".zip";
+                        ZIPfileSuffixName = dateString + args[j + 1] + ".zip";
                         break;
                     case "-e":
-                        e = @"^.+\.(" + args[j + 1].Replace(",", "|") + ")$";
+                        listOfAllowedExtensions = @"^.+\.(" + args[j + 1].Replace(",", "|") + ")$";
                         break;
                     case "-i":
-                        i = args[j + 1];
+                        indexFileName = args[j + 1];
                         break;
                     case "-SRCDIR":
-                        SRCDIR = args[j + 1];
+                        sourceDirectory = args[j + 1];
                         break;
                     case "-DESTDIR":
-                        DESTDIR = args[j + 1];
+                        destinationDirectory = args[j + 1];
                         break;
                 }
             }
