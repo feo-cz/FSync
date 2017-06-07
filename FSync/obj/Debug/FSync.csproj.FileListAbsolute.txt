@@ -14,3 +14,4 @@ C:\Users\Pavel\Documents\Visual Studio 2015\GITHub\FSync\FSync\obj\Debug\FSync.c
 C:\Users\Pavel\Documents\Visual Studio 2015\GITHub\FSync\FSync\obj\Debug\FSync.exe
 C:\Users\Pavel\Documents\Visual Studio 2015\GITHub\FSync\FSync\obj\Debug\FSync.pdb
 C:\Users\Pavel\Documents\Visual Studio 2015\GITHub\FSync\FSync\bin\Debug\FSync-lib.dll
+C:\Users\Pavel\Documents\Visual Studio 2015\GITHub\FSync\FSync\bin\Debug\Ionic.Zip.dll

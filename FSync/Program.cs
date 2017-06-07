@@ -12,6 +12,7 @@ namespace FSync
         static bool allowCreateSubdirectories   = false;
         static bool allowOverwriteExistingFiles = false;
         static string ZIPfileSuffixName         = "";
+        static int ZIPpartSizeMB                = 0;
         static string listOfAllowedExtensions   = @"^.+\.*$";
         static string indexFileName             = "";
         static string sourceDirectory           = "";
@@ -20,11 +21,14 @@ namespace FSync
         static void Main(string[] args)
         {
 
+            Console.WriteLine("test");
+
             setParams(args);
 
             FSync_lib.FSync_lib.setAllowCreateSubdirectories(allowCreateSubdirectories);
             FSync_lib.FSync_lib.setAllowOverwriteExistingFiles(allowOverwriteExistingFiles);
             FSync_lib.FSync_lib.setZIPfileSuffixName(ZIPfileSuffixName);
+            FSync_lib.FSync_lib.setZIPpartSizeMB(ZIPpartSizeMB);
             FSync_lib.FSync_lib.setListOfAllowedExtensions(listOfAllowedExtensions);
             FSync_lib.FSync_lib.setIndexFileName(indexFileName);
             FSync_lib.FSync_lib.setSourceDirectory(sourceDirectory);
@@ -52,6 +56,9 @@ namespace FSync
                         string dateString = date.ToString("yyyyMMddHHmmss");
 
                         ZIPfileSuffixName = dateString + args[j + 1] + ".zip";
+                        break;
+                    case "-z_size":
+                        ZIPpartSizeMB = Int32.Parse(args[j + 1]);
                         break;
                     case "-e":
                         listOfAllowedExtensions = @"^.+\.(" + args[j + 1].Replace(",", "|") + ")$";

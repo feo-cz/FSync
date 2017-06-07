@@ -6,3 +6,12 @@ C:\Users\Obchod\Documents\FSync\FSync\FSync\bin\Release\FSync-lib.pdb
 C:\Users\Obchod\Documents\FSync\FSync\FSync\obj\Release\FSync.csprojResolveAssemblyReference.cache
 C:\Users\Obchod\Documents\FSync\FSync\FSync\obj\Release\FSync.exe
 C:\Users\Obchod\Documents\FSync\FSync\FSync\obj\Release\FSync.pdb
+C:\Users\Pavel\Documents\Visual Studio 2015\GITHub\FSync\FSync\bin\Release\FSync.exe.config
+C:\Users\Pavel\Documents\Visual Studio 2015\GITHub\FSync\FSync\obj\Release\FSync.exe
+C:\Users\Pavel\Documents\Visual Studio 2015\GITHub\FSync\FSync\obj\Release\FSync.pdb
+C:\Users\Pavel\Documents\Visual Studio 2015\GITHub\FSync\FSync\bin\Release\FSync.exe
+C:\Users\Pavel\Documents\Visual Studio 2015\GITHub\FSync\FSync\bin\Release\FSync.pdb
+C:\Users\Pavel\Documents\Visual Studio 2015\GITHub\FSync\FSync\bin\Release\FSync-lib.dll
+C:\Users\Pavel\Documents\Visual Studio 2015\GITHub\FSync\FSync\bin\Release\Ionic.Zip.dll
+C:\Users\Pavel\Documents\Visual Studio 2015\GITHub\FSync\FSync\bin\Release\FSync-lib.pdb
+C:\Users\Pavel\Documents\Visual Studio 2015\GITHub\FSync\FSync\obj\Release\FSync.csprojResolveAssemblyReference.cache
