@@ -17,12 +17,10 @@ namespace FSync
         static string indexFileName             = "";
         static string sourceDirectory           = "";
         static string destinationDirectory      = "";
+        static string pathForLogFile            = @"C:\logs\";
 
         static void Main(string[] args)
         {
-
-            Console.WriteLine("test");
-
             setParams(args);
 
             FSync_lib.FSync_lib.setAllowCreateSubdirectories(allowCreateSubdirectories);
@@ -33,6 +31,7 @@ namespace FSync
             FSync_lib.FSync_lib.setIndexFileName(indexFileName);
             FSync_lib.FSync_lib.setSourceDirectory(sourceDirectory);
             FSync_lib.FSync_lib.setDestinationDirectory(destinationDirectory);
+            FSync_lib.FSync_lib.setPathForLogFile(pathForLogFile);
 
             FSync_lib.FSync_lib.run();
 
@@ -71,6 +70,9 @@ namespace FSync
                         break;
                     case "-DESTDIR":
                         destinationDirectory = args[j + 1];
+                        break;
+                    case "-l":
+                        pathForLogFile = args[j + 1];
                         break;
                 }
             }
